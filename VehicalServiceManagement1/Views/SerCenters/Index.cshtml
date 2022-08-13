@@ -1,0 +1,57 @@
+﻿@model IEnumerable<VehicalServiceManagement1.SerCenter>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceCenterID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceCenterName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppBookDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicalType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicalModel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ServiceCenterID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ServiceCenterName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AppBookDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VehicalType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VehicalModel)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ServiceCenterID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ServiceCenterID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ServiceCenterID })
+    </td>
+</tr>
+}
+
+</table>

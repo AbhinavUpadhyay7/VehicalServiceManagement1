@@ -1,0 +1,50 @@
+﻿@model VehicalServiceManagement1.SerCenter
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SerCenter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceCenterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceCenterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppBookDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppBookDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicalType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicalType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicalModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicalModel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ServiceCenterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
